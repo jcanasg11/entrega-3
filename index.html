@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+</head>
+<center><div class="a" id="q" style=" background-color: white; font-size: 30px; font-family:arial">Digite un mensaje y luego oprime algun numero Z,L o X</div></center>
+<br>
+<center><input type="text"  id="cuadro" ></center>
+
+<body onkeypress="teclado()" style="
+    background: linear-gradient(top, gray, blue,lightblue);
+    background: -webkit-linear-gradient(top, gray, lightblue);
+    background: -moz-linear-gradient(top, gray, lightblue);
+    background: -o-linear-gradient(top, gray, lightblue);
+    background: -ms-linear-gradient(top, gray,lightblue);
+    background-attachment: fixed; ">
+	<script>
+		function teclado()
+		{
+			console.log(event.type);
+			console.log(event.code);
+
+
+
+			if (event.code=="KeyZ")
+			 {
+	 			 var x = document.getElementById("q");
+	 			 x.classList.add('b');
+	 			 x.classList.remove('a');
+	 			 x.classList.remove('c');
+	 			 x.classList.remove('e');
+	 			var cuadro=document.getElementById('cuadro').value;
+	 			document.getElementById('q').innerHTML=cuadro;
+
+  				
+			}
+			else
+			{}
+				
+								if (event.code=="KeyL")
+								 {
+			 					 var x1 = document.getElementById("q");
+	 							 x1.classList.add('c');	
+	 							 x1.classList.remove('b');
+	 							 x1.classList.remove('a');
+	 							 x1.classList.remove('e');
+	 							 var cuadro=document.getElementById('cuadro').value;
+	 						     document.getElementById('q').innerHTML=cuadro;
+			 					
+									}
+									else
+									{}
+
+
+								       if (event.code=="KeyX")
+			 					       {
+			 						  		 var x2 = document.getElementById("q");
+	 			 							x2.classList.add('e');
+	 			 							x2.classList.remove('a');
+	 			 							x2.classList.remove('b');
+	 			 							x2.classList.remove('c');
+	 			 						    var cuadro=document.getElementById('cuadro').value;
+	 						                document.getElementById('q').innerHTML=cuadro;
+			 						  		
+									}
+									else
+										{}	
+					
+				
+		}
+	</script>
+
+	
+
+
+	
+		
+		
+	
+
+</body>
+</html>
